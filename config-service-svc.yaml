@@ -12,7 +12,7 @@ metadata:
     expose: "true"
     app: config-service
     provider: fabric8
-    version: 0.0.1-SNAPSHOT
+    #version: 0.0.1-SNAPSHOT
     group: com.evry
   name: config-service
 spec:
