@@ -4,13 +4,13 @@ kind: Deployment
 metadata:
   annotations:
     fabric8.io/iconUrl: img/icons/spring-boot.svg
-    fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=config-service&var-version=0.0.1-SNAPSHOT
+    fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=config-service
     fabric8.io/scm-tag: HEAD
     fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/config-service
   labels:
     app: config-service
     provider: fabric8
-    version: 0.0.1-SNAPSHOT
+    #version: 0.0.1-SNAPSHOT
     group: com.evry
   name: config-service
 spec:
@@ -25,13 +25,13 @@ spec:
     metadata:
       annotations:
         fabric8.io/iconUrl: img/icons/spring-boot.svg
-        fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=config-service&var-version=0.0.1-SNAPSHOT
+        fabric8.io/metrics-path: dashboard/file/kubernetes-pods.json/?var-project=config-service
         fabric8.io/scm-tag: HEAD
         fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/config-service
       labels:
         app: config-service
         provider: fabric8
-        version: 0.0.1-SNAPSHOT
+        #version: 0.0.1-SNAPSHOT
         group: com.evry
     spec:
       containers:
@@ -40,7 +40,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: evry/config-service:snapshot-181123-035616-0282
+        image: ankitgroverevry/config-service
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
