@@ -12,7 +12,7 @@ metadata:
     expose: "true"
     app: online-store-web
     provider: fabric8
-    version: 0.0.1-SNAPSHOT
+    #version: 0.0.1-SNAPSHOT
     group: org.springframework.boot
   name: online-store-web
 spec:
